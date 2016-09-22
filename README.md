@@ -1,17 +1,15 @@
 # Salesforce-Formulas-Collection
-
-###### Set Expiration Date for a record (One Year later and last Day of the Month)
+---
+##### Formula: Set Expiration Date for a record (One Year later and last Day of the Month)
 ```
-Formula: TEXT(DATE(YEAR(DATEVALUE(CreatedDate)) +1, MONTH(DATEVALUE(CreatedDate)) + 1, 1) - 1)
+TEXT(DATE(YEAR(DATEVALUE(CreatedDate)) +1, MONTH(DATEVALUE(CreatedDate)) + 1, 1) - 1)
 ```
 ```
 Result:  IF CreatedDate = 15/12/2016 THEN Your_Custom_Field__c = 31/12/2017
 ```
-
-###### Returns the number of business days between two dates (Week_Start_Date__c and Week_End_Date__c)
+---
+##### Formula: Returns the number of business days between two dates (Week_Start_Date__c and Week_End_Date__c)
 ```
-Formula: 
-
 CASE(MOD( Week_Start_Date__c - DATE(1985,6,24),7), 
 0 , CASE( MOD( Week_End_Date__c - Week_Start_Date__c ,7),1,2,2,3,3,4,4,5,5,5,6,5,1), 
 1 , CASE( MOD( Week_End_Date__c - Week_Start_Date__c ,7),1,2,2,3,3,4,4,4,5,4,6,5,1), 
