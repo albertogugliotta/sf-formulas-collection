@@ -1,8 +1,12 @@
 # Salesforce-Formulas-Collection
+
+Its a Collection of custom Salesforce Formulas, feel free to contribute by adding new ones
+
+
 ---
 ##### Formula: Set Expiration Date for a record (One Year later and last Day of the Month)
 ```
-DATE(YEAR(DATEVALUE(CreatedDate)) +1, MONTH(DATEVALUE(CreatedDate)) + 1, 1) - 1
+DATE(YEAR(DATEVALUE(CreatedDate)) + 1, MONTH(DATEVALUE(CreatedDate)) + 1, 1) - 1
 ```
 ```
 Result:  IF CreatedDate = 15/12/2016 THEN Your_Custom_Field__c = 31/12/2017
