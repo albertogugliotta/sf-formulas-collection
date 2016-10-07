@@ -28,6 +28,7 @@ CASE(MOD( Week_Start_Date__c - DATE(1985,6,24),7),
 ```
 Result:  IF Week_Start_Date__c = 18/09/2016 AND Week_End_Date__c = 26/09/2016 THEN Your_Custom_Field__c = 6
 ```
+---
 ##### Formula: Calculates the age based on a Birth Date field
 ```
 IF( NOT( ISBLANK( Date_Of_Birth__c) ) ,
